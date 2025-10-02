@@ -1,15 +1,15 @@
-Iris Image Disorder Detection
-Objective
+# Iris Image Disorder Detection
+## Objective
 
 This project develops a simple AI prototype to detect eye disorders from iris images, classifying them as Healthy or Diseased (Unhealthy). The goal is to demonstrate understanding of image preprocessing, transfer learning, model training, evaluation, and explainability (Grad-CAM visualizations).
 
-Dataset
+## Dataset
 
 Source: Kaggle Iris Disease Dataset or similar public iris datasets.
 
 Classes: Healthy and Unhealthy.
 
-Structure:
+## Structure:
 
 Augmented Dataset/
 ├── Healthy/
@@ -22,16 +22,16 @@ Augmented Dataset/
     └── ...
 
 
-Splits: 60% Train, 20% Validation, 20% Test.
+## Splits: 60% Train, 20% Validation, 20% Test.
 
-Steps
-1. Data Loading & Visualization
+## Steps
+### 1. Data Loading & Visualization
 
 Loaded sample iris images using matplotlib.
 
 Displayed random images from each class to verify data.
 
-2. Preprocessing
+### 2. Preprocessing
 
 Resized images to 224×224 pixels.
 
@@ -43,7 +43,7 @@ Rotation, width/height shift, zoom, shear, horizontal flip.
 
 Split data into train, validation, and test sets.
 
-3. Model Building
+### 3. Model Building
 
 Used VGG16 pre-trained on ImageNet (without top layer).
 
@@ -67,13 +67,13 @@ Loss: Binary Crossentropy
 
 Metrics: Accuracy
 
-4. Training
+### 4. Training
 
 Trained for 20 epochs with EarlyStopping on validation accuracy.
 
 Training used binary class mode for Healthy vs Unhealthy.
 
-5. Evaluation
+### 5. Evaluation
 
 Evaluated on the test set:
 
@@ -99,7 +99,7 @@ Achieved 96% test accuracy.
 
 Plotted normalized confusion matrix and training vs validation loss/accuracy curves.
 
-6. Explainability
+### 6. Explainability
 
 Generated Grad-CAM heatmaps for test images.
 
