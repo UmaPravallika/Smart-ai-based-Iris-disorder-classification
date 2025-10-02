@@ -136,4 +136,24 @@ VGG16 Paper
 
 Kaggle Iris Disease Dataset
 
-Grad-CAM implementation: tf.keras & OpenCV
+Grad-CAM implementation: tf.keras & OpenCV  
+
+## Usage
+
+### Generating Model Weights
+
+The trained model weights (`model.weights.h5`) are not included due to size constraints (>25 MB).  
+To generate them, follow these steps:
+
+1. Open the notebook `iris_disorder_classification.ipynb` in Google Colab or Jupyter.
+2. Ensure the dataset folder is present and correctly referenced in the notebook.
+3. Run all cells sequentially. The model will be trained and weights saved automatically.
+
+```python
+# Example code snippet inside the notebook to save weights
+from tensorflow.keras.models import load_model
+
+# After defining and training your model (vgg16 or chosen CNN)
+model.save_weights("model.weights.h5")
+print("✅ Model weights saved as model.weights.h5")
+
